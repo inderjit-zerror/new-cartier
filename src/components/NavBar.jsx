@@ -46,7 +46,7 @@ const NavBar = () => {
               height={1000}
               alt="logo"
             /> */}
-            <img className="w-[150px] " src="/data/cartierLogo.svg" alt="" />
+            <img className="w-[150px] " src="/data/cartierLogo.svg"  alt="Cartier Logo" fetchpriority="high" />
           </div>
 
           {/* Right */}
