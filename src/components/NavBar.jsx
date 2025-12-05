@@ -39,13 +39,14 @@ const NavBar = () => {
 
           {/* Center */}
           <div className="w-fit h-[50px] flex justify-center items-center absolute top-[0%] left-[50%] translate-x-[-50%] overflow-hidden ">
-            <Image
+            {/* <Image
               src={"/data/cartierLogo.svg"}
               className="w-[150px] "
               width={1000}
               height={1000}
               alt="logo"
-            />
+            /> */}
+            <img className="w-[150px] " src="/data/cartierLogo.svg" alt="" />
           </div>
 
           {/* Right */}
