@@ -6,6 +6,7 @@ import gsap from "gsap";
 import Footer from "@/components/Footer";
 import Lenis from "lenis";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import ThirdSection from "@/components/ThirdSection";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Home() {
@@ -107,6 +108,16 @@ export default function Home() {
       {/* ☑️ Background Music */}
       <audio ref={audioRef} src="/sound/BackgroundSound.mp3" loop />
 
+      {/* PageNavigator */}
+      <div className="w-[20px] PN pointer-events-none h-[10dvh]  fixed top-[50%] translate-y-[-50%] right-[2%] z-[100] flex flex-col justify-between items-center">
+        
+        {/* page_Navigator */}
+        <div className=" FirstNavigator w-[10px] h-[10px] rounded-full bg-white"></div>
+        <div className=" SecondNavigator w-[4px] h-[4px] rounded-full bg-white"></div>
+        <div className=" ThirdNavigator w-[4px] h-[4px] rounded-full bg-white"></div>
+
+      </div>
+
       {/* ☑️ Audio On/Off Btn */}
       <div
         onClick={handleToggleSound}
@@ -124,7 +135,7 @@ export default function Home() {
       </div>
 
       {/* Text_detail-div-1 */}
-      <div className="w-full h-fit fixed top-[75%] left-[0%] px-[4vw] z-[100] tex-1-cont  z-[100]">
+      <div className="w-full TextT-Title max-md:w-fit h-fit fixed top-[75%] left-[0%] px-[4vw] z-[100] tex-1-cont  z-[100]">
         {/* Title-1 */}
         <div className="w-fit h-[35px] flex overflow-hidden">
           {t1.map((item, index) => {
@@ -160,7 +171,7 @@ export default function Home() {
       </div>
 
       {/* Text_detail-div-2 */}
-      <div className="w-full h-fit fixed top-[75%] left-[0%] px-[4vw] z-[100] opacity-0 tex-2-cont z-[100] ">
+      <div className="w-full TextT-Title max-md:w-fit h-fit fixed top-[75%] left-[0%] px-[4vw] z-[100] opacity-0 tex-2-cont z-[100] ">
         {/* Title-1 */}
         <div className="w-fit h-[35px] flex overflow-hidden">
           {t3.map((item, index) => {
@@ -195,10 +206,13 @@ export default function Home() {
         </div>
       </div>
 
+
+
       {/* ☑️ All Sections */}
       <div className="w-full h-fit relative">
-      <HeroSection />
-      <SecondSection />
+        <HeroSection />
+        <SecondSection />
+        <ThirdSection />
       </div>
 
       <Footer />

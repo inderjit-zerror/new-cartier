@@ -1,4 +1,11 @@
 "use client";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useEffect } from "react";
+gsap.registerPlugin(useGSAP);
+gsap.registerPlugin(ScrollTrigger);
+
 import { useState } from "react";
 import {
   FaInstagram,
@@ -15,8 +22,34 @@ const Footer = () => {
     legal: false,
   });
 
+
+  useEffect(()=>{
+    gsap.to('.TextT-Title',{
+      opacity:0,
+      ease:'linear',
+      scrollTrigger:{
+        trigger:'.FooterMainCont',
+        start:'top 95%',
+        end:'top 95%',
+        scrub:true,
+        // markers:true
+      }
+    })
+    gsap.to('.PN',{
+      opacity:0,
+      ease:'linear',
+      scrollTrigger:{
+        trigger:'.FooterMainCont',
+        start:'top 95%',
+        end:'top 95%',
+        scrub:true,
+        // markers:true
+      }
+    })
+  },[])
+
   return (
-    <footer className="w-full bg-white  pt-[100px] pb-16 z-[200]">
+    <footer className="FooterMainCont w-full bg-white  pt-[100px] pb-16 z-[200]">
       {/* Newsletter */}
       <div className="w-full flex flex-col items-center max-w-[900px] m-auto">
         <h3 className="text-lg tracking-wide mb-4">

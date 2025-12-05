@@ -10,9 +10,6 @@ gsap.registerPlugin(useGSAP);
 gsap.registerPlugin(ScrollTrigger);
 
 const HeroSection = () => {
-
-
-
   useEffect(() => {
     // Parelex Effect
     gsap.fromTo(
@@ -32,6 +29,22 @@ const HeroSection = () => {
         },
       }
     );
+
+    if (window.innerWidth <= 1024) return;
+    else {
+      gsap.to(".MainNavBarCont", {
+        top: "-70px",
+        ease: "linear",
+
+        scrollTrigger: {
+          trigger: ".HeroSectionMain",
+          start: "top -2%",
+          end: " top -7%",
+          scrub: true,
+          // markers: true,
+        },
+      });
+    }
   }, []);
 
   return (
@@ -56,7 +69,6 @@ const HeroSection = () => {
           />
         </Canvas>
       </div>
-
     </div>
   );
 };

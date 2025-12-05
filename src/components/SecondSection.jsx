@@ -31,6 +31,31 @@ const SecondSection = () => {
     );
   }, []);
 
+  // FOR PAGE NAVIGATOR
+  useEffect(()=>{
+     const PN1 = gsap.timeline({
+      scrollTrigger:{
+        trigger:'.SecondSectionMain',
+        start:'top 50%',
+        end:'top 40%',
+        scrub:true,
+        // markers:true
+      }
+     })
+     PN1.to('.FirstNavigator',{
+      width:'4px',
+      height: '4px',
+      ease:'linear'
+     },'p1')
+     PN1.to('.SecondNavigator',{
+      width:'10px',
+      height: '10px',
+      ease:'linear'
+     },'p1')
+
+  },[])
+
+
   useEffect(() => {
     const SS = gsap.timeline({
       scrollTrigger: {

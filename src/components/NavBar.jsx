@@ -23,7 +23,7 @@ const NavBar = () => {
 
   return (
     <>
-      <div className="w-full h-fit flex flex-col fixed top-0 left-0 z-[100] pt-[20px] max-lg:pt-[10px] max-lg:pb-[10px] bg-white ">
+      <div className="w-full MainNavBarCont h-fit flex flex-col fixed top-0 left-0 z-[100] pt-[20px] max-lg:pt-[10px] max-lg:pb-[10px] bg-white ">
         {/* TOP */}
         <div className="w-full h-[50px] flex relative justify-between  px-[4vw] md:px-[8vw] items-center">
           {/* LEft */}
