@@ -121,7 +121,7 @@ const Footer = () => {
         </div>
 
         {/* MOBILE Accordion */}
-        <div className="md:hidden flex flex-col gap-6">
+        <div className="md:hidden flex flex-col gap-6 mt-[40px]">
 
           {/* Block Template */}
           {[
